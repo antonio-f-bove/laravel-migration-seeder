@@ -20,10 +20,10 @@ class CreateTrainsTable extends Migration
             $table->string('arrival_station', 50);
             $table->dateTime('departure_time');
             $table->dateTime('arrival_time');
-            $table->smallInteger('number')->unsigned();     // cercare un nome migliore ??? potrebbe corrispondere all'id ???
+            $table->smallInteger('number')->unsigned();
             $table->tinyInteger('carriages')->unsigned();
-            $table->boolean('in_time')->default(false);     // LOL
-            $table->boolean('cancelled')->default(false);
+            $table->boolean('in_time')->default(true);
+            $table->boolean('is_cancelled')->default(false);
             $table->timestamps();
         });
     }
